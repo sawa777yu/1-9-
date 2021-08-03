@@ -1,0 +1,81 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header{
+  height: 50px;
+  background-color: #ff9a4b;
+}
+
+main{
+  margin: 50px auto;
+  width: 960px;
+  display: flex;
+  justify-content: center;
+}
+
+.box{
+  width: 300px;
+  background-color: #eee;
+  position: relative;
+  padding: 10px;
+}
+
+.box:nth-child(2){
+  margin: 0 30px;
+}
+
+.step{
+  padding: 3px;
+  color: white;
+  background-color: #ff9a4b;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  /*親要素にrelativeを指定してからabsoluteを入れると
+  .imageクラスの画像のmarginに干渉しなくなった。
+  理由はよくわからない。
+  これだけではstepの表示位置がboxのpaddingに干渉していたので
+  topとleftを指定して無理やり親要素のスタート地点に合わせた。
+  .imageクラスの方にposition:absoluteをいれる方が
+  しっくり来るが、positionをいれると画像が表示されなくなる
+  これも理由はよくわからない*/
+}
+
+.image1{
+  width: auto;
+  /*width autoは記述しなくていい*/
+  height:150px;
+  background-image: url(img/flow01.png);
+  background-size: cover;
+  background-position: bottom;
+}
+
+.image2{
+  width: auto;
+  height:150px;
+  background-image: url(img/flow02.png);
+  background-size: cover;
+  background-position: bottom;
+}
+
+.image3{
+  width: auto;
+  height:150px;
+  background-image: url(img/flow03.png);
+  background-size: cover;
+  background-position: bottom;
+}
+
+.title{
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+
+footer{
+  height: 50px;
+  background-color: #aaa;
+}
